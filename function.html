@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow Function 
+    </div>
+    <script>
+        let greet = () => console.log("Good Morning");
+
+         let sum = (a , b)=> {       
+            return a+b;
+        };
+
+          let sum2 = (a , b) =>  a+b;
+           let half = a => a/2;
+
+        // Arrow function
+    greet = ()=> {
+        console.log("Good Morning");
+    }
+
+    greet();
+    setTimeout(() => {
+        console.log("We are inside timeout");
+    }, 3000)
+    </script>
+</body>
+</html>
