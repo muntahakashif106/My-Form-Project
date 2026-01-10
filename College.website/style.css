@@ -88,41 +88,82 @@ nav a:hover {
 
 /* ===== COURSES ===== */
 .courses {
-    padding: 80px 60px;
-    text-align: center;
+  padding: 60px 20px;
+  background: #f4f6f8;
+  text-align: center;
 }
 
 .courses h2 {
-    font-size: 34px;
-    margin-bottom: 45px;
-    color: #0f2027;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #222;
 }
 
 .course-container {
-    display: flex;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .course-card {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    transition: 0.4s;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
 .course-card:hover {
-    transform: translateY(-12px);
+  transform: translateY(-8px);
 }
 
 .course-card img {
-    width: 100%;
-    border-radius: 14px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .course-card h3 {
-    margin: 15px 0;
-    color: #0f2027;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.course-card p {
+  padding: 0 15px 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Optional: Add a button inside each course card */
+.course-card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+  background: #0f2027;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.course-card button:hover {
+    background: #00eaff;
+    color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 950px) {
+    .course-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card {
+        width: 80%;
+    }
 }
 
 /* ===== ABOUT ===== */
